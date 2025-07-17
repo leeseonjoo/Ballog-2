@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/dateEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="날짜" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="8dp">
+
+            <EditText
+                android:id="@+id/startTimeEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="시작 시간" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"/>
+
+            <EditText
+                android:id="@+id/endTimeEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="끝 시간" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="훈련 카테고리"
+            android:paddingTop="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <CheckBox android:id="@+id/categoryDribble" android:text="드리블" />
+            <CheckBox android:id="@+id/categoryShooting" android:text="슈팅" />
+            <CheckBox android:id="@+id/categoryPass" android:text="패스" />
+            <CheckBox android:id="@+id/categoryDefense" android:text="수비" />
+            <CheckBox android:id="@+id/categoryStamina" android:text="체력" />
+            <CheckBox android:id="@+id/categoryTactic" android:text="전술" />
+            <CheckBox android:id="@+id/categoryGame" android:text="경기" />
+            <CheckBox android:id="@+id/categoryEtc" android:text="기타" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="훈련 컨디션"
+            android:paddingTop="16dp" />
+
+        <RadioGroup
+            android:id="@+id/conditionGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton android:id="@+id/conditionVeryGood" android:text="😄" />
+            <RadioButton android:id="@+id/conditionGood" android:text="🙂" />
+            <RadioButton android:id="@+id/conditionNormal" android:text="😐" />
+            <RadioButton android:id="@+id/conditionBad" android:text="🙁" />
+            <RadioButton android:id="@+id/conditionVeryBad" android:text="😭" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="훈련 전술 보드"
+            android:paddingTop="16dp" />
+
+        <com.futsal.traininglog.view.BoardView
+            android:id="@+id/boardView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="#EEEEEE" />
+
+    </LinearLayout>
+</ScrollView>
